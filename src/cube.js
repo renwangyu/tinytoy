@@ -61,6 +61,9 @@ cube.prototype.create = function () {
 	}
 }
 cube.prototype.handleEvent = function () {
+	if(!this.stage) {
+		return;
+	}
 	var html = this.stage;
 	var isMouseDown = false;
 	var preCoordinate = {
