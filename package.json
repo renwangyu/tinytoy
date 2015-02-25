@@ -1,0 +1,12 @@
+{
+  "name": "tinytoy.js",
+  "version": "0.0.1",
+  "description": "无聊的小玩意",
+  "main": "js/headroom.js",
+  "author": "renwangyu",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}

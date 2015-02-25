@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link rel="stylesheet" type="text/css" href="css/cube.css">
+	<script type="text/javascript">
+		window.onload = function () {
+			var imgSrc = [
+				'http://pic.baike.soso.com/p/20100924/20100924133125-592621149.jpg',
+				'http://a0.att.hudong.com/45/20/19300001203883130519200281483.jpg',
+				'http://wenwen.soso.com/p/20110907/20110907184559-1635218682.jpg',
+				'http://p4.img.cctvpic.com/nettv/newgame/2012/1030/20121030100533960.jpg',
+				'http://a2.att.hudong.com/13/09/19300001203883130519097381063.jpg',
+				'http://imgsrc.baidu.com/forum/pic/item/d3a2e5ec08fa513dcff89b203d6d55fbb3fbd9a8.jpg'
+			];
+			var cubeElem1 = document.getElementById('myCube1');
+			var cubeElem2 = document.getElementById('myCube2');
+			window.tinytoy.tt_cube({
+				stage: cubeElem1,
+				imgSrc: imgSrc,
+				wh: 250
+			});
+			window.tinytoy.tt_cube({
+				stage: cubeElem2,
+				imgSrc: imgSrc,
+				wh: 100
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="myCube1" style="margin-top: 250px;"></div>
+	<div id="myCube2" style="margin-top: 250px;"></div>
+	<script src="dist/tinytoy.min.js"></script>
+</body>
+</html>

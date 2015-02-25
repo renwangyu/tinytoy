@@ -1,0 +1,13 @@
+.tt-stage{
+	margin: 0 auto;
+	padding: 0;
+	perspective-origin: 50% -50%;
+}
+.tt-stage>.tt-img-container{
+	transform-style: preserve-3d;
+	position: relative;
+}
+.tt-stage>.tt-img-container>img{
+	position: absolute;
+	display: block;
+}
