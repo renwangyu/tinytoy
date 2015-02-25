@@ -9,4 +9,8 @@
       wh, //img的长宽
       perspective, //舞台视角，关系到3d的效果
     }
-  #人懒，休息休息一下
+  效果就是下面这样的：
+  ![](https://github.com/renwangyu-bomb/tinytoy/blob/master/screenshots/cube.jpg)
+  具体的可以见demo
+ 
+#人懒，休息，休息一下
