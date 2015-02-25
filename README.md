@@ -10,6 +10,7 @@
       wh, //img的长宽
       perspective, //舞台视角，关系到3d的效果
     }
+    鼠标点下去按住cube可以360旋转，没有绑在body上，还没有做去除drag的效果，不算完美，至少目前有这功能
 ###效果就是下面这样的：
   ![](https://github.com/renwangyu-bomb/tinytoy/blob/master/screenshots/cube.jpg)
   具体的可以见demo
