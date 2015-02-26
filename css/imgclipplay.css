@@ -1,0 +1,15 @@
+.tt-imgclipplay-box{
+	position: relative;
+	border: 2px solid #000;
+	-webkit-box-shadow: -5px -5px 10px #000;
+	box-shadow: -5px -5px 10px #000;
+}
+.tt-imgclipplay-box>img{
+	position: absolute;
+	z-index: 999;
+}
+.tt-imgclipplay-box>img.curr{
+	z-index: 1000;
+	-webkit-transition: 1s cubic-bezier(1, -1, 0, 5);
+	transition: 1s cubic-bezier(1, -1, 0, 5);
+}
