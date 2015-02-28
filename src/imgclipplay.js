@@ -72,10 +72,10 @@ imgclipplay.prototype.play = function () {
 
 	this.timer = setTimeout(function () {
 		var currImg = document.querySelector('img[tt-index=\'' + this.currIdx + '\']'),
-			nextImg = document.querySelector('img[tt-index=\'' + this.getNextIdx(1) + '\']'),
-			nnextImg = document.querySelector('img[tt-index=\'' + this.getNextIdx(2) + '\']');
+			nextImg = document.querySelector('img[tt-index=\'' + this.getNextIdx(1) + '\']');
+			// nnextImg = document.querySelector('img[tt-index=\'' + this.getNextIdx(2) + '\']');
 		currImg.style.cssText = currImg.style.cssText.replace(radiusReg, '0px at');
-		setTimeout(function (currImg, nextImg, nnextImg, r, updateCurrIdx) {
+		setTimeout(function (currImg, nextImg, r, updateCurrIdx) {
 			return function () {
 				//把下一个img的next去掉，增加curr
 				util.addClass(nextImg, 'curr');
@@ -84,13 +84,14 @@ imgclipplay.prototype.play = function () {
 				//延缓200ms，展现下张图片放大
 				setTimeout((function (currImg) {
 					return function () {
+						nextImg.style.cssText = nextImg.style.cssText.replace(radiusReg, '0px at');
 						nextImg.style.cssText = nextImg.style.cssText.replace(/0px at/g, r + 'px at');
 					}
 				})(currImg), 200);
 				//更新当前index
 				updateCurrIdx();
 			}
-		}(currImg, nextImg, nnextImg, this.radius, this.updateCurrIdx.bind(this)), 1000);
+		}(currImg, nextImg, this.radius, this.updateCurrIdx.bind(this)), 1000);
 		//循环
 		this.timer = setTimeout(arguments.callee.bind(this), this.interval);
 	}.bind(this), this.interval);
