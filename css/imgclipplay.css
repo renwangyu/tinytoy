@@ -1,0 +1,15 @@
+.tt-imgclipplay-box{
+	position: relative;
+	background: #000;
+}
+.tt-imgclipplay-box>img{
+	position: absolute;
+	display: none;
+	-webkit-transition: 1s linear;
+	-moz-transition: 1s linear;
+	transition: 1s linear;
+}
+.tt-imgclipplay-box>img.curr{
+	z-index: 1000;
+	display: block;
+}

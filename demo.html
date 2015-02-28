@@ -3,9 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>demo</title>
+	<!--正式用这个就行了 <link rel="stylesheet" type="text/css" href="dist/tinytoy.cat.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/cube.css">
+	<link rel="stylesheet" type="text/css" href="css/imgclipplay.css">
 	<script type="text/javascript">
 		window.onload = function () {
+			// demo1
 			var imgSrc = [
 				'http://pic.baike.soso.com/p/20100924/20100924133125-592621149.jpg',
 				'http://a0.att.hudong.com/45/20/19300001203883130519200281483.jpg',
@@ -26,12 +29,36 @@
 				imgSrc: imgSrc,
 				wh: 100
 			});
+			// demo2
+			var imgclipplayElem1 = document.querySelector('#myImgclipplay1');
+			window.tinytoy.tt_imgclipplay({
+				imgBox: imgclipplayElem1,
+				imgSrc: [
+					'http://pic.baike.soso.com/p/20100924/20100924133125-592621149.jpg',
+					'http://a2.att.hudong.com/13/09/19300001203883130519097381063.jpg',
+					'http://a0.att.hudong.com/45/20/19300001203883130519200281483.jpg'
+				],
+				// imgWidth: 500,
+				// imgHeight: 300,
+				interval: 3000
+			});
 		}
 	</script>
 </head>
 <body>
-	<div id="myCube1" style="margin-top: 250px;"></div>
-	<div id="myCube2" style="margin-top: 250px;"></div>
-	<script src="dist/tinytoy.min.js"></script>
+	<div id="myCube1" style="margin-top: 100px;"></div>
+	<div id="myCube2" style="margin-top: 100px;"></div>
+	<br>
+	<hr>
+	<br>
+	<div id="myImgclipplay1" style="margin: 0 auto;"></div>
+	<br>
+	<hr>
+	<br>
+	<!--加载js-->
+	<!--正式用这个就行了 <script src="dist/tinytoy.min.js"></script>-->
+	<script src="src/cube.js"></script>
+	<script src="src/imgclipplay.js"></script>
+	<script src="src/tinytoy.js"></script>
 </body>
 </html>

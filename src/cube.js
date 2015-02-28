@@ -2,6 +2,7 @@
  * 正方体类
  */
 'use strict';
+
 function cube(cfg) {
 	this.imgSrc = cfg.imgSrc || []; //img的url数组
 	while (this.imgSrc.length) {
@@ -48,7 +49,7 @@ cube.prototype.create = function () {
 		// img
 		this.imgSrc.forEach(function (src, i) {
 			var img = document.createElement('img');
-			img.setAttribute('alt', 'tinytoy\'s img');
+			img.setAttribute('alt', 'tinytoy\'s loading img');
 			img.setAttribute('src', src);
 			util.addStyle(img, 'width', this.imgWh + 'px');
 			util.addStyle(img, 'height', this.imgWh + 'px');

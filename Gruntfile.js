@@ -17,6 +17,17 @@ module.exports = function (grunt) {
       outputMin: '<%= meta.outputDir %>/<%= pkg.name.replace("js", "min.js") %>'
     },
 
+    concat: {
+      options: {
+        //定义一个字符串插入没个文件之间用于连接输出
+        separator: ''
+      },
+      dist: {
+        src: ['css/*.css'],
+        dest: '<%=meta.outputDir %>/<%= pkg.name.replace("js", "cat.css") %>'
+      }
+    },
+
     uglify: {
       options: {
         banner: '<%= meta.banner %>',
@@ -30,6 +41,9 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('css', ['concat']);
+  grunt.registerTask('csjss', ['uglify']);
 };

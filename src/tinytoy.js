@@ -31,6 +31,11 @@
 		tt_cube: function (cfg) {
 			var myCube = new cube(cfg);
 			myCube.init();
+		},
+		// img裁剪式轮播
+		tt_imgclipplay: function (cfg) {
+			var myImgclipplay = new imgclipplay(cfg);
+			myImgclipplay.init();
 		}
 	};
 })();
