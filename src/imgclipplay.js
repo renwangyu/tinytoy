@@ -1,8 +1,6 @@
 /**
  * img裁剪式轮播类
  */
-// 'use strict';
-
 function imgclipplay(cfg) {
 	this.imgBox = cfg.imgBox; //img容器
 	this.imgSrc = cfg.imgSrc || []; //img的url数组

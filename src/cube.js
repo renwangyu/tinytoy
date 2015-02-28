@@ -1,8 +1,6 @@
 /**
  * 正方体类
  */
-'use strict';
-
 function cube(cfg) {
 	this.imgSrc = cfg.imgSrc || []; //img的url数组
 	while (this.imgSrc.length) {

@@ -1,6 +1,4 @@
 (function () {
-	'use strict';
-
 	if (window.tinytoy) {
 		return;
 	}

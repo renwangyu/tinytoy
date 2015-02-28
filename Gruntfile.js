@@ -45,5 +45,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default', ['concat', 'uglify']);
   grunt.registerTask('css', ['concat']);
-  grunt.registerTask('csjss', ['uglify']);
+  grunt.registerTask('js', ['uglify']);
 };
